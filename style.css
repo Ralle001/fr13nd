@@ -79,6 +79,7 @@ canvas{
 
 .socialMedia{
   margin: 0;
+  margin-top: 10px;
   position: absolute;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
