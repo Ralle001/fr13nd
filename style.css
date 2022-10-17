@@ -1,6 +1,8 @@
 body{
   margin:0;
   font:normal 75% Arial, Helvetica, sans-serif;
+  height: 100%;
+  overflow: hidden;
 }
 
 canvas{
@@ -56,9 +58,12 @@ canvas{
 
 .homeScreenButton{
   border-radius: 0 0 0 0;
-  margin: auto;
-  width: 50%;
-  border: 3px solid white;
   padding: 10px;
-  color: white;
+  color: black;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
