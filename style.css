@@ -57,6 +57,7 @@ canvas{
 }
 
 .homeScreenButton{
+  font-size: 14px;
   border-radius: 0 0 0 0;
   padding: 10px;
   color: black;
@@ -66,4 +67,11 @@ canvas{
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  transition-duration: 0.4s;
+}
+
+.homeScreenButton:hover{
+  background-color: grey;
+  color: white;
+  border: 0;
 }
