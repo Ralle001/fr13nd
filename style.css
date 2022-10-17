@@ -95,8 +95,3 @@ canvas{
     height: 50;
     width: 50;
 }
-
-.twitch:hover{
-    background-color: grey;
-    border: 0;
-}
