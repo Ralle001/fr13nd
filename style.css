@@ -57,10 +57,12 @@ canvas{
 }
 
 .homeScreenButton{
-  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
   border-radius: 0 0 0 0;
   padding: 10px;
-  color: black;
+  color: white;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -71,7 +73,6 @@ canvas{
 }
 
 .homeScreenButton:hover{
-  background-color: grey;
-  color: white;
+  color: grey;
   border: 0;
 }
