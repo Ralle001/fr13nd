@@ -74,6 +74,23 @@ canvas{
   transition-duration: 0.4s;
 }
 
+.homeScreenButton2{
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  font-family: "Silkscreen", sans-serif;
+  border-radius: 0 0 0 0;
+  padding: 10px;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition-duration: 0.4s;
+}
+
 .homeScreenButton:hover{
   color: grey;
   border: 0;
