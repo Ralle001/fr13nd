@@ -203,8 +203,15 @@ let playInterval;
 
 const playMusic = function () {
   if (audioSource.paused) {
-    window.focus();
     audioSource.play();
+    if (playPromise !== undefined) {
+      playPromise.then(function() {
+        // Automatic playback started!
+      }).catch(function(error) {
+        // Automatic playback failed.
+        // Show a UI element to let the user manually start playback.
+      });
+    }
     playBtn.classList.add("active");
     playInterval = setInterval(updateRunningTime, 500);
   } else {
