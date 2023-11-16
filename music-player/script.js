@@ -30,9 +30,9 @@ var songs,
     {
       name: "Project HAUZ",
       singer: "LostFeather",
-      duration: "02:29:01",
-      url: "songs/On_My_Way.mp3",
-      albumArt: "images/On_My_Way.jpg",
+      duration: "149:01",
+      url: "songs/project-hauz.m4a",
+      albumArt: "images/project-hauz.jpg",
     },
   ];
 
