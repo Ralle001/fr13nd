@@ -1,24 +1,72 @@
 'use strict';
+
+
+
+/**
+ * all music information
+ */
+
 const musicData = [
   {
-    backgroundImage: "./assets/images/project-hauz.png",
-    posterUrl: "./assets/images/project-hauz.png",
-    title: "Project HAUZ",
-    album: "",
-    year: 2023,
-    artist: "LostFeather",
+    backgroundImage: "./assets/images/poster-1.jpg",
+    posterUrl: "./assets/images/poster-1.jpg",
+    title: "Happy Moments (Master)",
+    album: "No Spirit",
+    year: 2022,
+    artist: "No Spirit x Tonion",
     musicPath: "./assets/music/music-1.mp3",
   },
+  {
+    backgroundImage: "./assets/images/poster-2.jpg",
+    posterUrl: "./assets/images/poster-2.jpg",
+    title: "We Are Going To Be Ok (Master)",
+    album: "No Spirit",
+    year: 2022,
+    artist: "No Spirit x Jhove",
+    musicPath: "./assets/music/music-2.mp3",
+  },
+  {
+    backgroundImage: "./assets/images/poster-3.jpg",
+    posterUrl: "./assets/images/poster-3.jpg",
+    title: "Winter Meadow",
+    album: "No Spirit",
+    year: 2022,
+    artist: "No Spirit x  juniorodeo",
+    musicPath: "./assets/music/music-3.mp3",
+  },
+  {
+    backgroundImage: "./assets/images/poster-4.jpg",
+    posterUrl: "./assets/images/poster-4.jpg",
+    title: "From Where We Started",
+    album: "No Spirit",
+    year: 2022,
+    artist: "No Spirit",
+    musicPath: "./assets/music/music-4.mp3",
+  },
+  {
+    backgroundImage: "./assets/images/poster-5.jpg",
+    posterUrl: "./assets/images/poster-5.jpg",
+    title: "Where I Found You",
+    album: "No Spirit",
+    year: 2022,
+    artist: "No Spirit",
+    musicPath: "./assets/music/music-5.mp3",
+  },
 ];
+
+
 
 /**
  * add eventListnere on all elements that are passed
  */
+
 const addEventOnElements = function (elements, eventType, callback) {
   for (let i = 0, len = elements.length; i < len; i++) {
     elements[i].addEventListener(eventType, callback);
   }
 }
+
+
 
 /**
  * PLAYLIST
@@ -43,6 +91,8 @@ for (let i = 0, len = musicData.length; i < len; i++) {
   `;
 }
 
+
+
 /**
  * PLAYLIST MODAL SIDEBAR TOGGLE
  * 
@@ -61,6 +111,8 @@ const togglePlaylist = function () {
 }
 
 addEventOnElements(playlistTogglers, "click", togglePlaylist);
+
+
 
 /**
  * PLAYLIST ITEM
@@ -84,6 +136,8 @@ addEventOnElements(playlistItems, "click", function () {
   currentMusic = Number(this.dataset.playlistItem);
   changePlaylistItem();
 });
+
+
 
 /**
  * PLAYER
@@ -135,11 +189,14 @@ const updateDuration = function () {
 
 audioSource.addEventListener("loadeddata", updateDuration);
 
+
+
 /**
  * PLAY MUSIC
  * 
  * play and pause music when click on play button
  */
+
 const playBtn = document.querySelector("[data-play-btn]");
 
 let playInterval;
@@ -171,6 +228,8 @@ const updateRunningTime = function () {
   isMusicEnd();
 }
 
+
+
 /**
  * RANGE FILL WIDTH
  * 
@@ -189,6 +248,8 @@ const updateRangeFill = function () {
 
 addEventOnElements(ranges, "input", updateRangeFill);
 
+
+
 /**
  * SEEK MUSIC
  * 
@@ -201,6 +262,8 @@ const seek = function () {
 }
 
 playerSeekRange.addEventListener("input", seek);
+
+
 
 /**
  * END MUSIC
@@ -215,6 +278,8 @@ const isMusicEnd = function () {
     updateRangeFill();
   }
 }
+
+
 
 /**
  * SKIP TO NEXT MUSIC
@@ -237,6 +302,8 @@ const skipNext = function () {
 
 playerSkipNextBtn.addEventListener("click", skipNext);
 
+
+
 /**
  * SKIP TO PREVIOUS MUSIC
  */
@@ -258,6 +325,8 @@ const skipPrev = function () {
 
 playerSkipPrevBtn.addEventListener("click", skipPrev);
 
+
+
 /**
  * SHUFFLE MUSIC
  */
@@ -278,6 +347,8 @@ const shuffle = function () {
 
 playerShuffleBtn.addEventListener("click", shuffle);
 
+
+
 /**
  * REPEAT MUSIC
  */
@@ -295,6 +366,8 @@ const repeat = function () {
 }
 
 playerRepeatBtn.addEventListener("click", repeat);
+
+
 
 /**
  * MUSIC VOLUME
