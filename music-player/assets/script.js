@@ -14,9 +14,8 @@ const musicData = [
     album: "Solo",
     year: 2023,
     artist: "LostFeather",
-    //musicPath: "./assets/music/project-hauz.mp3",
-    musicPath: "https://fr13nd.dev/music-player/assets/music/project-hauz.mp3",
-  },
+    musicPath: "./assets/music/project-hauz.mp3"
+  }
 ];
 
 
