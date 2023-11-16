@@ -203,6 +203,7 @@ let playInterval;
 
 const playMusic = function () {
   if (audioSource.paused) {
+    window.focus();
     audioSource.play();
     playBtn.classList.add("active");
     playInterval = setInterval(updateRunningTime, 500);
