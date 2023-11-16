@@ -204,8 +204,8 @@ let playInterval;
 const playMusic = function () {
   if (audioSource.paused) {
     audioSource.play();
-    if (playPromise !== undefined) {
-      playPromise.then(function() {
+    if (audioSource !== undefined) {
+      audioSource.then(function() {
         // Automatic playback started!
       }).catch(function(error) {
         // Automatic playback failed.
