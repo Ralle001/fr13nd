@@ -14,7 +14,7 @@ const musicData = [
     album: "",
     year: 2023,
     artist: "LostFeather",
-    musicPath: "./assets/music/project-hauz.m4a",
+    musicPath: "./assets/music/project-hauz.mp3",
   },
   {
     backgroundImage: "./assets/images/poster-2.jpg",
