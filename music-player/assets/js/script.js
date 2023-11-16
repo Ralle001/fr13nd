@@ -14,7 +14,7 @@ const musicData = [
     album: "Solo",
     year: 2023,
     artist: "LostFeather",
-    musicPath: "./music/project-hauz.mp3",
+    musicPath: "../music/project-hauz.mp3",
   },
 ];
 
