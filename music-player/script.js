@@ -13,8 +13,7 @@ var isDrawerOpen = false,
   drawerSongDuration,
   drawerBar,
   dawerProgress,
-  isKorean = false,
-  baseUrl = "https://abdulmoqueet.github.io/music-player/",
+  baseUrl = "https://fr13nd.dev/music-player/",
   accentColorAr = [
     "#ff4b66",
     "#62ff6e",
@@ -198,11 +197,7 @@ function changeTheme(id) {
   if (id == 7) card[currentProfile.id].style.color = "#ffffff";
   else card[currentProfile.id].style.color = currentProfile.accentColor;
 
-  if (isKorean) {
-    $(".left-pannel__anime").css("color", currentProfile.accentColor);
-  } else {
-    $(".left-pannel__favorite").css("color", currentProfile.accentColor);
-  }
+  $(".left-pannel__favorite").css("color", currentProfile.accentColor);
 }
 
 function navHandler() {
@@ -276,19 +271,10 @@ function generateElements(ko) {
   $(".cards-holder").html("");
   $(".list-view").html("");
 
-  if (ko) {
-    songs = korean;
-    $(".left-pannel__anime").text("_Hindi");
-    $(".left-pannel__anime").css("color", currentProfile.accentColor);
-    $(".left-pannel__favorite").text("English");
-    $(".left-pannel__favorite").css("color", "black");
-  } else {
-    songs = english;
-    $(".left-pannel__favorite").text("_English");
-    $(".left-pannel__favorite").css("color", currentProfile.accentColor);
-    $(".left-pannel__anime").text("Hindi");
-    $(".left-pannel__anime").css("color", "black");
-  }
+  songs = english;
+  $(".left-pannel__favorite").text("_English");
+  $(".left-pannel__favorite").css("color", currentProfile.accentColor);
+  $(".left-pannel__anime").css("color", "black");
 
   for (var i = 0; i < songs.length; i++) {
     cards =
@@ -347,8 +333,6 @@ function generateElements(ko) {
   }
 
   $(".list-view").html(songList);
-
-  this.isKorean = ko;
 }
 
 function playSong(songId, checkPause) {
